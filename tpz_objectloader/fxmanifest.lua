@@ -4,9 +4,9 @@ rdr3_warning 'I acknowledge that this is a prerelease build of RedM, and I am aw
 
 author 'Nosmakos'
 description 'TPZ-CORE - Object Loader'
-version '1.0.0'
+version '1.0.1'
 
-shared_scripts { 'config.lua' }
+shared_scripts { 'config.lua', 'data/*.lua' }
 client_scripts { 'client/*.lua' }
 
 lua54 'yes'
