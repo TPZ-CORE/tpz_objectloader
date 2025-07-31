@@ -138,6 +138,148 @@ local data = {
         ObjectRenderDistance = 50,
     },
 
+    { 
+        Object = 'p_haybalecover01x',
+    
+        Coords = { 
+            x = -384.55242919921875, y = 781.7122192382812, z = 114.82528686523438,
+            pitch = 0, roll = 0, yaw = -90.83075714111328,
+        },
+    
+        PlaceObjectOnGroundProperly = false,
+    
+        ObjectRenderDistance = 50,
+    },
+
+    { 
+        Object = 'p_haybalecover03x',
+    
+        Coords = { 
+            x = -382.1791687011719, y = 776.6112670898438, z = 114.95735931396484,
+            pitch = 0, roll = 0, yaw = -144.80316162109375,
+        },
+    
+        PlaceObjectOnGroundProperly = false,
+    
+        ObjectRenderDistance = 50,
+    },
+    
+    { 
+        Object = 'p_chair02x',
+    
+        Coords = { 
+            x = -384.7772216796875, y = 779.4386596679688, z = 114.89694213867188,
+            pitch = 0, roll = 0, yaw = -91.7095718383789,
+        },
+    
+        PlaceObjectOnGroundProperly = true,
+    
+        ObjectRenderDistance = 50,
+    },
+
+    { 
+        Object = 'val_fencepen01_dx',
+    
+        Coords = { 
+            x = -387.16461181640625, y = 772.8037109375, z = 115.1292495727539,
+            pitch = -3.14968252182006, roll = 2.05194377899169, yaw = -173.7707061767578,
+        },
+    
+        PlaceObjectOnGroundProperly = false,
+    
+        ObjectRenderDistance = 50,
+    },
+
+    { 
+        Object = 'val_fencepen01_fx',
+    
+        Coords = { 
+            x = -387.89227294921875, y = 772.719482421875, z = 115.14055633544922,
+            pitch = 0, roll = 0, yaw = 7.52712774276733,
+        },
+    
+        PlaceObjectOnGroundProperly = false,
+    
+        ObjectRenderDistance = 50,
+    },
+
+    { 
+        Object = 'val_fencepen01_dx',
+    
+        Coords = { 
+            x = -393.47564697265625, y = 780.8825073242188, z = 115.00989532470703,
+            pitch = 0, roll = 0, yaw = 106.45835876464844,
+        },
+    
+        PlaceObjectOnGroundProperly = false,
+    
+        ObjectRenderDistance = 50,
+    },
+
+    { 
+        Object = 'val_fencepen01_fx',
+    
+        Coords = { 
+            x = -393.6939392089844, y = 781.5929565429688, z = 115.0033950805664,
+            pitch = 0, roll = 0, yaw = 107.52886199951172,
+        },
+    
+        PlaceObjectOnGroundProperly = false,
+    
+        ObjectRenderDistance = 50,
+    },
+
+    { 
+        Object = 'val_fencepen01_dx',
+    
+        Coords = { 
+            x = -398.3739318847656, y = 775.6697998046875, z = 115.09313201904297,
+            pitch = 0, roll = 0, yaw = 4.86622714996337,
+        },
+    
+        PlaceObjectOnGroundProperly = false,
+    
+        ObjectRenderDistance = 50,
+    },
+
+    { 
+        Object = 'val_fencepen01_fx',
+    
+        Coords = { 
+            x = -397.6622314453125, y = 775.7392578125, z = 115.10472869873047,
+            pitch = 0, roll = 0, yaw = 6.96101093292236,
+        },
+    
+        PlaceObjectOnGroundProperly = false,
+    
+        ObjectRenderDistance = 50,
+    },
+
+    { 
+        Object = 'val_fencepen01_dx',
+    
+        Coords = { 
+            x = -399.96051025390625, y = 787.1414184570312, z = 115.18017578125,
+            pitch = 0, roll = 0, yaw = -43.88971328735351,
+        },
+    
+        PlaceObjectOnGroundProperly = false,
+    
+        ObjectRenderDistance = 50,
+    },
+
+    { 
+        Object = 'val_fencepen01_fx',
+    
+        Coords = { 
+            x = -399.4384460449219, y = 786.6397705078125, z = 115.17832946777344,
+            pitch = 0, roll = 0, yaw = -37.02332305908203,
+        },
+    
+        PlaceObjectOnGroundProperly = false,
+    
+        ObjectRenderDistance = 50,
+    },
 }
 
 ---------------------------------------------------------------
