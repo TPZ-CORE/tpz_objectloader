@@ -12,6 +12,6 @@ Config.WaitTime = 2000 -- Time in milliseconds.
 --[[ Functions ]]--
 ---------------------------------------------------------------
 
-function InsertLocation(data)
+function InsertData(data)
     table.insert(Config.Locations, data)
 end
