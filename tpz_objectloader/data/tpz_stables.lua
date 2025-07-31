@@ -286,4 +286,4 @@ local data = {
 --[[ DO NOT TOUCH ]]--
 ---------------------------------------------------------------
 
-Citizen.CreateThread(function() for _, v in pairs (data) do InsertLocation(v) end end)
+Citizen.CreateThread(function() for _, v in pairs (data) do InsertData(v) end end)
