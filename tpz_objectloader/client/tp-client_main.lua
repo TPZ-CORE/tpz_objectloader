@@ -78,32 +78,66 @@ Citizen.CreateThread(function()
             local locCoords   = vector3(location.Coords.x, location.Coords.y, location.Coords.z)
             local distance    = #(coordsDist - locCoords)
 
-             if distance > location.ObjectRenderDistance and location.EntityHandler then
 
-               RemoveEntityProperly(location.EntityHandler, GetHashKey(location.Object) )
-               location.EntityHandler = nil
-            end
+            if not location.RemoveExistingObject then
+               if distance > location.ObjectRenderDistance and location.EntityHandler then
 
-            if distance <= location.ObjectRenderDistance and location.EntityHandler == nil then
-
-               LoadModel( location.Object )
-
-               local toVec  = vector3(location.Coords.x, location.Coords.y, location.Coords.z)
-               local object = CreateObject(GetHashKey(location.Object), toVec, false, false, false, false, false)
-
-               SetEntityVisible(object, true)
-               SetEntityRotation(object, location.Coords.pitch, location.Coords.roll, location.Coords.yaw, 2)
-               SetEntityCoords(object, location.Coords.x, location.Coords.y, location.Coords.z)
-
-               if location.PlaceObjectOnGroundProperly then
-                 PlaceObjectOnGroundProperly(object, true)
+                  RemoveEntityProperly(location.EntityHandler, GetHashKey(location.Object) )
+                  location.EntityHandler = nil
+               end
+   
+               if distance <= location.ObjectRenderDistance and location.EntityHandler == nil then
+   
+                  LoadModel( location.Object )
+   
+                  local toVec  = vector3(location.Coords.x, location.Coords.y, location.Coords.z)
+                  local object = CreateObject(GetHashKey(location.Object), toVec, false, false, false, false, false)
+   
+                  SetEntityVisible(object, true)
+                  SetEntityRotation(object, location.Coords.pitch, location.Coords.roll, location.Coords.yaw, 2)
+                  SetEntityCoords(object, location.Coords.x, location.Coords.y, location.Coords.z)
+   
+                  if location.PlaceObjectOnGroundProperly then
+                    PlaceObjectOnGroundProperly(object, true)
+                  end
+   
+                  SetEntityCollision(object, true)
+                  FreezeEntityPosition(object, true)
+   
+                  SetEntityFadeIn(object, true)
+                  location.EntityHandler = object
+   
                end
 
-               SetEntityCollision(object, true)
-               FreezeEntityPosition(object, true)
+            else
 
-               SetEntityFadeIn(object, true)
-               location.EntityHandler = object
+               if distance <= location.ObjectRenderDistance and location.EntityHandler == nil then
+
+                  local coords = vector3(location.Coords.x, location.Coords.y, location.Coords.z)
+   
+                  local objects = GetGamePool("CObject")
+                  for _, obj in pairs(objects) do
+            
+                     local entityCoords = GetEntityCoords(obj)
+                     local model = GetEntityModel(obj)
+   
+                     if #(entityCoords - coords) <= 1.0 then
+   
+                        if model == GetHashKey(location.Object) then
+                           DeleteObject(obj)
+                        end
+                        
+                     end
+   
+                  end
+   
+                  location.EntityHandler = handle
+               end
+   
+               if distance > location.ObjectRenderDistance and location.EntityHandler then
+   
+                  location.EntityHandler = nil
+               end
 
             end
 
