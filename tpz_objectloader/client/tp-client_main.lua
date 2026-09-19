@@ -153,13 +153,13 @@ Citizen.CreateThread(function()
    
                         if model == GetHashKey(location.Object) then
                            DeleteObject(obj)
+						   location.EntityHandler = kbj
                         end
                         
                      end
    
                   end
    
-                  location.EntityHandler = handle
                end
    
                if distance > location.ObjectRenderDistance and location.EntityHandler then
